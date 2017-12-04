@@ -33,7 +33,20 @@ if layer % 2 == 0:
 else:
     if slot == firstOnLayer or slot == lastOnLayer:
         distance = int((layer/2)+(layer/2)-1)
+    elif distFromLast >= layer:
+        if distFromFirst >= layer/2:
+            offset = distFromFirst - (layer/2-1)
+            distance = int(layer/2+offset)
+        else:
+            offset = (layer/2-1)-distFromFirst
+            distance = int(layer/2+offset)
     else:
-        distance = "vittu"
+        if distFromLast >= layer/2:
+            offset = distFromLast - (layer/2-1)
+            distance = int(layer/2+offset)
+        else:
+            offset = (layer/2-1)-distFromLast
+            distance = int(layer/2+offset)
+
 
 print(distance)
