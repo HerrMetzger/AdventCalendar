@@ -36,14 +36,14 @@ else:
     elif distFromLast >= layer:
         if distFromFirst >= layer/2:
             offset = distFromFirst - (layer/2-1)
-            distance = int(layer/2+offset)
+            distance = int(layer/2+offset-1)
         else:
             offset = (layer/2-1)-distFromFirst
             distance = int(layer/2+offset)
     else:
         if distFromLast >= layer/2:
             offset = distFromLast - (layer/2-1)
-            distance = int(layer/2+offset)
+            distance = int(layer/2+offset-1)
         else:
             offset = (layer/2-1)-distFromLast
             distance = int(layer/2+offset)
